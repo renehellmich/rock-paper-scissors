@@ -2,6 +2,8 @@ Schere Stein Papier Spiel
 
 Dieses Projekt realisiert das klassische Schere-Stein-Papier-Spiel und verwendet HTML, CSS und JavaScript, um eine interaktive Webanwendung zu erstellen.
 
+https://renehellmich.github.io/rock-paper-scissors/
+
 Projektstruktur
 
 Das Projekt ist in mehrere Dateien unterteilt:
