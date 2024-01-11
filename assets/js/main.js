@@ -48,8 +48,7 @@ variables.rock.addEventListener("click", playGame)
 variables.paper.addEventListener("click", playGame)
 variables.scissor.addEventListener("click", playGame)
 variables.restart.addEventListener("click", () => functions.restart())
-/*
+
 radios.arrRounds.forEach(el => {
-    el.addEventListener("click", functions.restart())
+    el.addEventListener("click", () => functions.restart())
 });
-*/

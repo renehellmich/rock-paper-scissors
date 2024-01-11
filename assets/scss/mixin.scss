@@ -6,3 +6,18 @@
     gap: $gap;
     flex-wrap: $wrap;
 }
+
+@mixin dimension($width, $heigth) {
+    width: $width;
+    height: $heigth;
+}
+
+@mixin textSettings($fSize, $fWeight) {
+    font-size: $fSize;
+    font-weight: $fWeight;
+}
+
+@mixin color($color, $background) {
+    color: $color;
+    background: $background;
+}

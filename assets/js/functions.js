@@ -15,7 +15,7 @@ export const functions = {
 },
     getPlayRounds: () => {
         radios.arrRounds = Array.from(document.getElementsByName("playRounds")) 
-        // console.log(arrRounds);
+        console.log(radios.arrRounds);
         radios.arrRounds.forEach(el => {
             el.checked
             ? variables.roundChoice = Number(el.value)
