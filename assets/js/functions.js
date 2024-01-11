@@ -14,19 +14,34 @@ export const functions = {
     }
 },
     getPlayRounds: () => {
-        let roundChoice
         const arrRounds = Array.from(document.getElementsByName("playRounds")) 
         // console.log(arrRounds);
         arrRounds.forEach(el => {
             el.checked
-            ? roundChoice = el.value
+            ? variables.roundChoice = Number(el.value)
             : null
         });
         // console.log(roundChoice);
-        return roundChoice
     },
     setInitialPoints: () => {
-        output.spanResultMe.innerHTML = 0
-        output.spanResultComp.innerHTML = 0
+        output.spanResultMe.innerHTML = variables.pointMe
+        output.spanResultComp.innerHTML = variables.pointComp
+    },
+    roundCheck: () => {
+        console.log("roundPlayed: ", variables.roundPlayed, "roundChoice: ", variables.roundChoice);
+        return variables.roundPlayed <= variables.roundChoice
+    },
+    countUp: (player) => {
+        switch(player) {
+            case "Comp":
+                variables.pointComp++
+                output.spanResultComp.innerHTML = variables.pointComp
+                break;
+            case "Me":
+                variables.pointMe++
+                output.spanResultMe.innerHTML = variables.pointMe
+                break;
+        }
+        variables.roundPlayed++
     }
 }

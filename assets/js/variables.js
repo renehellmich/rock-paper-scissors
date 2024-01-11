@@ -7,7 +7,8 @@ export let radios = {
 
 export let output = {
     spanResultMe: document.querySelector("#spanResultMe"),
-    spanResultComp: document.querySelector("#spanResultComp")
+    spanResultComp: document.querySelector("#spanResultComp"),
+    outputText: document.querySelector("#outputMove"),
 }
 
 export let variables = {
@@ -23,5 +24,13 @@ export let variables = {
     // Auswahlvariablen deklarieren
     choiceMe: null,
     choiceComp: null, // Auswahlvariable Computer
+
+    // Punkte Variablen deklariert
+    pointMe: 0,
+    pointComp: 0,
+
+    // Rundenzähler
+    roundChoice: 0,
+    roundPlayed: 0,
 
 }
