@@ -2,7 +2,8 @@ export let radios = {
     radio5: document.querySelector("#radioRound5"),
     radio10: document.querySelector("#radioRound10"),
     radio15: document.querySelector("#radioRound15"),
-    radio20: document.querySelector("#radioRound20")
+    radio20: document.querySelector("#radioRound20"),
+    arrRounds: 0
 }
 
 export let output = {

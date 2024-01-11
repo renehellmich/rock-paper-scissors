@@ -14,9 +14,9 @@ export const functions = {
     }
 },
     getPlayRounds: () => {
-        const arrRounds = Array.from(document.getElementsByName("playRounds")) 
+        radios.arrRounds = Array.from(document.getElementsByName("playRounds")) 
         // console.log(arrRounds);
-        arrRounds.forEach(el => {
+        radios.arrRounds.forEach(el => {
             el.checked
             ? variables.roundChoice = Number(el.value)
             : null
@@ -29,7 +29,7 @@ export const functions = {
     },
     roundCheck: () => {
         console.log("roundPlayed: ", variables.roundPlayed, "roundChoice: ", variables.roundChoice);
-        return variables.roundPlayed <= variables.roundChoice
+        return variables.roundPlayed < variables.roundChoice
     },
     countUp: (player) => {
         switch(player) {
@@ -43,5 +43,23 @@ export const functions = {
                 break;
         }
         variables.roundPlayed++
+    },
+    postResult: () => {
+        if(variables.pointMe > variables.pointComp) {
+            output.outputText.innerHTML = `Du hast mit ${variables.pointMe} zu ${variables.pointComp} Punkten gewonnen. 🎉🎉🎉`
+        } else if(variables.pointMe < variables.pointComp) {
+            output.outputText.innerHTML = `Du hast mit ${variables.pointMe} zu ${variables.pointComp} verloren. Was kannst du eigentlich??? 💀💀💀`
+        } else {
+            output.outputText.innerHTML = `Die Partie endete unentschieden. Langweilig 🤯🤯🤯`
+        }
+    },
+    restart: () => {
+        variables.pointMe = 0
+        variables.pointComp = 0
+        variables.roundPlayed = 0
+        
+        output.spanResultMe.innerHTML = variables.pointMe
+        output.spanResultComp.innerHTML = variables.pointComp
+        output.outputText.innerHTML = "Neues Spiel, neues Glück, Let's get ready to ruuuummmmbbbblleeeeeeeee 🫡🫡🫡"
     }
 }

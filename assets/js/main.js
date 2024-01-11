@@ -5,13 +5,14 @@ console.log(functions.compChoiceRandom());
 console.log(functions.getPlayRounds());
 
 function playGame(e) {
+    functions.getPlayRounds()
     const playerChoice = e.target.parentElement.id.slice(3)
     const compChoice = functions.compChoiceRandom()
 
     console.log("ME: ", playerChoice, "Comp: ", compChoice);
     console.log("Roundcheck: ", functions.roundCheck());
-    if (functions.roundCheck() === true) {
-        console.log("check");
+    console.log("check");
+    if (functions.roundCheck() == true) {
         if (playerChoice == compChoice) {
             output.outputText.innerHTML = "Unentschieden!! Bitte nochmal spielen"
         } else if (playerChoice == "Rock" && compChoice == "Paper") {
@@ -33,8 +34,10 @@ function playGame(e) {
             output.outputText.innerHTML = `${playerChoice} beats ${compChoice}. You win!`
             functions.countUp("Me")
         }
-    } else {
+    } 
+    if(functions.roundCheck() == false) {
         console.log("check abgelehnt");
+        functions.postResult()
     }
 }
 
@@ -47,3 +50,9 @@ functions.setInitialPoints()
 variables.rock.addEventListener("click", playGame)
 variables.paper.addEventListener("click", playGame)
 variables.scissor.addEventListener("click", playGame)
+variables.restart.addEventListener("click", () => functions.restart())
+/*
+radios.arrRounds.forEach(el => {
+    el.addEventListener("click", functions.restart())
+});
+*/
