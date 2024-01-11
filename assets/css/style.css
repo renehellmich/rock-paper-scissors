@@ -5,14 +5,32 @@ body {
   align-items: center;
   gap: 16px;
   flex-wrap: no-wrap;
+  background: url("../img/rps1.gif");
+  background-size: 128px 128px;
 }
 body .roundSelection {
   display: flex;
   justify-content: center;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   gap: 16px;
   flex-wrap: no-wrap;
+}
+body .roundSelection h1 {
+  color: white;
+  background: "";
+  font-size: 5rem;
+  font-weight: bold;
+}
+body .roundSelection input {
+  width: 24px;
+  height: 24px;
+}
+body .roundSelection label {
+  color: white;
+  background: "";
+  font-size: 2rem;
+  font-weight: bold;
 }
 body .resultOutput {
   display: flex;
@@ -21,6 +39,20 @@ body .resultOutput {
   align-items: center;
   gap: 16px;
   flex-wrap: no-wrap;
+  box-shadow: inset 0 0 8px orange, 0 0 16px 0 black;
+  padding: 8px;
+  border-radius: 8px;
+}
+body .resultOutput #resultMe:hover,
+body .resultOutput #resultComp:hover {
+  background: linear-gradient(to left, blue 0%, red 50%);
+  border-radius: 8px;
+}
+body .resultOutput #resultContainer p {
+  color: white;
+  background: "";
+  font-size: 2rem;
+  font-weight: bold;
 }
 body .playField {
   display: flex;
@@ -30,6 +62,14 @@ body .playField {
   gap: 16px;
   flex-wrap: no-wrap;
 }
+body .playField #outputMove {
+  color: white;
+  background: "";
+  font-size: 2rem;
+  font-weight: bold;
+  max-width: 80vw;
+  text-align: center;
+}
 body .playField #decisionContainer {
   display: flex;
   justify-content: center;
@@ -37,6 +77,28 @@ body .playField #decisionContainer {
   align-items: center;
   gap: 1rem;
   flex-wrap: no-wrap;
+}
+body .playField #decisionContainer .imgContainer {
+  box-shadow: inset 0 0 8px orange, 0 0 16px 0 black;
+  padding: 8px;
+  border-radius: 8px;
+}
+body .playField #decisionContainer .imgContainer:hover {
+  background: linear-gradient(to left, blue 0%, red 50%);
+}
+body .playField p {
+  color: white;
+  background: "";
+  font-size: 2rem;
+  font-weight: bold;
+}
+body .playField #buttonRestart {
+  background: linear-gradient(to left, blue 0%, red 50%);
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */

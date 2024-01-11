@@ -4,18 +4,87 @@
 body {
 
     @include mix.displaySettings(flex, center, column, center, 16px, no-wrap);
+    background: url('../img/rps1.gif');
+    background-size: 128px 128px;
 
     .roundSelection {
-        @include mix.displaySettings(flex, center, row, center, 16px, no-wrap);
+        @include mix.displaySettings(flex, center, column, center, 16px, no-wrap);
+
+        h1 {
+            @include mix.color(white, "");
+            @include mix.textSettings(var.$h1FontSize, bold);
+        }
+
+        input {
+            @include mix.dimension(24px, 24px);
+        }
+
+        label {
+            @include mix.color(white, "");
+            @include mix.textSettings(2rem, bold);
+        }
     }
+
     .resultOutput {
         @include mix.displaySettings(flex, center, row, center, 16px, no-wrap);
+        box-shadow: inset 0 0 8px orange, 0 0 16px 0 black;
+        padding: 8px;
+        border-radius: 8px;
+
+        #resultMe,
+        #resultComp {
+
+            &:hover {
+                background: linear-gradient(to left, blue 0%, red 50%);
+                border-radius: 8px
+            }
+        }
+
+        #resultContainer {
+            p {
+                @include mix.color(white, "");
+                @include mix.textSettings(2rem, bold);
+            }
+        }
+
     }
+
     .playField {
         @include mix.displaySettings(flex, center, column, center, 16px, no-wrap);
-        
+
+        #outputMove {
+            @include mix.color(white, "");
+            @include mix.textSettings(2rem, bold);
+
+            max-width: 80vw;
+            text-align: center
+        }
+
         #decisionContainer {
             @include mix.displaySettings(flex, center, row, center, var.$gap-playChoice, no-wrap);
+
+            .imgContainer {
+                box-shadow: inset 0 0 8px orange, 0 0 16px 0 black;
+                padding: 8px;
+                border-radius: 8px;
+
+                &:hover {
+                    background: linear-gradient(to left, blue 0%, red 50%);
+                }
+            }
+        }
+
+        p {
+            @include mix.color(white, "");
+            @include mix.textSettings(2rem, bold);
+        }
+        
+        #buttonRestart {
+            background: linear-gradient(to left, blue 0%, red 50%);
+            color: white;
+            @include mix.textSettings(2rem, bold);
+            padding: 1rem 2rem;
+            border-radius: 1rem;
         }
     }
 }
