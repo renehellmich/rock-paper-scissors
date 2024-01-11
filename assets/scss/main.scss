@@ -1,0 +1,21 @@
+@use 'mixin' as mix;
+@use 'variables' as var;
+
+body {
+
+    @include mix.displaySettings(flex, center, column, center, 16px, no-wrap);
+
+    .roundSelection {
+        @include mix.displaySettings(flex, center, row, center, 16px, no-wrap);
+    }
+    .resultOutput {
+        @include mix.displaySettings(flex, center, row, center, 16px, no-wrap);
+    }
+    .playField {
+        @include mix.displaySettings(flex, center, column, center, 16px, no-wrap);
+        
+        #decisionContainer {
+            @include mix.displaySettings(flex, center, row, center, var.$gap-playChoice, no-wrap);
+        }
+    }
+}

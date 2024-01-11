@@ -42,9 +42,6 @@ function playGame(e) {
 }
 
 
-
-
-
 functions.setInitialPoints()
 // addEventListener()
 variables.rock.addEventListener("click", playGame)
