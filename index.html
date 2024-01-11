@@ -4,10 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Schere Stein Papier</title>
-    <link rel="stylesheet" href="./assets/css/scss/">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-    
+    <section class="roundSelection">
+        <h1>How many rounds?</h1>
+        <div>
+            <input type="radio" name="playRounds" id="radioRound5" value ="radioRound5">
+            <label for="radioRound5">5</label>
+            <input type="radio" name="playRounds" id="radioRound10" value ="radioRound10">
+            <label for="radioRound10">10</label>
+            <input type="radio" name="playRounds" id="radioRound15" value ="radioRound15">
+            <label for="radioRound15">15</label>
+            <input type="radio" name="playRounds" id="radioRound20" value ="radioRound20">
+            <label for="radioRound20">20</label>
+        </div>
+    </section>
+    <section class="resultOutput">
+        <figure class="imgContainer">
+            <img src="" alt="">
+        </figure>
+        <div id="resultContainer">
+            <p>
+                <span class="spanResult" id="spanResultMe"></span> : <span class="spanResult" id="spanResultComp"></span>
+            </p>
+        </div>
+        <figure class="imgContainer">
+            <img src="" alt="">
+        </figure>
+    </section>
+    <section>
+        <h2>Let's play</h2>
+        <div id="decisionContainer">
+            <figure class="imgContainer" id="imgRock">
+                <img src="" alt="">
+            </figure>
+            <figure class="imgContainer" id="imgPaper">
+                <img src="" alt="">
+            </figure>
+            <figure class="imgContainer" id="imgScissor">
+                <img src="" alt="">
+            </figure>
+        </div>
+        <p>Make your Move</p>
+        <p id="buttonRestart">restart</p>
+    </section>
+
     <script src="./assets/js/main.js" type="module"></script>
 </body>
 </html>
